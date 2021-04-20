@@ -1,3 +1,15 @@
+/*
+ * Reset for custom elements:
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * Variables:
+ */
+
 :root {
   --spacer-unit: 1rem;
   --color-black: #150C0D;
@@ -8,71 +20,227 @@
   --color-light-red: #D04A1F;
   --color-medium-red: #BD2E11;
   --color-dark-red: #97200C;
-  --color-orange: orange;
+  --color-gray: #867F71;
 }
+
+/*
+ * Layout:
+ */
 
 .main {
   display: flex;
-  margin: 8rem;
-}
-
-.header {
-  display: flex;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
 /*
- * Painting:
- * 8 rows
- * 6 columns
+ * Colors
  */
-
-.painting {
-  /* TODO: make painting dimensions responsive */
-  width: 600px;
-  height: 600px;
-}
-
-.painting__grid {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.painting__rectangle {
-  border: 1px dashed var(--color-black)
-}
 
 .background-light-blue {
   background-color: var(--color-light-blue);
+  order: 0;
 }
 
 .background-medium-blue {
   background-color: var(--color-medium-blue);
+  order: 1;
 }
 
 .background-dark-blue {
   background-color: var(--color-dark-blue);
+  order: 2;
 }
 
 .background-yellow {
   background-color: var(--color-yellow);
+  order: 3;
 }
 
 .background-light-red {
   background-color: var(--color-light-red);
+  order: 4;
 }
 
 .background-medium-red {
   background-color: var(--color-medium-red);
+  order: 5;
 }
 
 .background-dark-red {
   background-color: var(--color-dark-red);
+  order: 6;
 }
 
 .background-black {
   background-color: var(--color-black);
+  order: 7;
 }
+
+/*
+ * Painting
+ */
+
+.painting {
+  margin: var(--spacer-unit);
+  min-height: 100%;
+  width: 100%;
+}
+
+.painting__grid {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  border-radius: 1px;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(26, 1fr);
+}
+
+@media (min-width: 600px) {
+  .painting__grid {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 1.41% 11.17% 14.1% 12.39% 14.1% 14.1% 16.92% 6.18%;
+    grid-template-columns: 14.1% 11.17% 27.98% 18.98% 21.48% 6.18%;
+    grid-template-areas:
+      "a b b b c c"
+      "a d d d c c"
+      "a e e f g h"
+      "a i j k l m"
+      "n o p k l m"
+      "n o q r s m"
+      "n o t u v w"
+      "x x y y z w";
+  }
+  
+  .painting__rectangle {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.painting__rectangle {
+  display: block;
+  border: 3px solid var(--color-black);
+  height: calc(3 * var(--spacer-unit));
+}
+
+.painting__rectangle--1 {
+  grid-area: a;
+  border-left: 3px solid var(--color-gray);
+  border-top: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--2 {
+  grid-area: b;
+  border-top: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--3 {
+  grid-area: c;
+  border-top: 3px solid var(--color-gray);
+  border-right: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--4 {
+  grid-area: d;
+}
+
+.painting__rectangle--5 {
+  grid-area: e;
+}
+
+.painting__rectangle--6 {
+  grid-area: f;
+}
+
+.painting__rectangle--7 {
+  grid-area: g;
+}
+
+.painting__rectangle--8 {
+  grid-area: h;
+  border-right: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--9 {
+  grid-area: i;
+}
+
+.painting__rectangle--10 {
+  grid-area: j;
+}
+
+.painting__rectangle--11 {
+  grid-area: k;
+}
+
+.painting__rectangle--12 {
+  grid-area: l;
+}
+
+.painting__rectangle--13 {
+  grid-area: m;
+  border-right: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--14 {
+  grid-area: n;
+  border-left: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--15 {
+  grid-area: o;
+}
+
+.painting__rectangle--16 {
+  grid-area: p;
+}
+
+.painting__rectangle--17 {
+  grid-area: q;
+}
+
+.painting__rectangle--18 {
+  grid-area: r;
+}
+
+.painting__rectangle--19 {
+  grid-area: s;
+}
+
+.painting__rectangle--20 {
+  grid-area: t;
+}
+
+.painting__rectangle--21 {
+  grid-area: u;
+}
+
+.painting__rectangle--22 {
+  grid-area: v;
+}
+
+.painting__rectangle--23 {
+  grid-area: w;
+  border-right: 3px solid var(--color-gray);
+  border-bottom: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--24 {
+  grid-area: x;
+  border-bottom: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--25 {
+  grid-area: y;
+  border-bottom: 3px solid var(--color-gray);
+}
+
+.painting__rectangle--26 {
+  grid-area: z;
+  border-bottom: 3px solid var(--color-gray);
+}
+
