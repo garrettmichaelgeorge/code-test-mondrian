@@ -1,0 +1,67 @@
+:root {
+  --spacer-unit: 1rem;
+  --color-black: black;
+  --color-light-blue: light-blue;
+  --color-medium-blue: medium-blue;
+  --color-dark-blue: dark-blue;
+  --color-yellow: yellow;
+  --color-orange: orange;
+}
+
+.main {
+  display: flex;
+  margin: 8rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+ * Painting:
+ * 8 rows
+ * 6 columns
+ */
+
+.painting {
+  /* TODO: make painting dimensions responsive */
+  width: 600px;
+  height: 600px;
+}
+
+.painting__grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.painting__rectangle {
+  border: 1px dashed var(--color-black)
+}
+
+.light-blue {
+  background-color: var(--color-light-blue);
+}
+
+.medium-blue {
+  background-color: var(--color-medium-blue);
+}
+
+.dark-blue {
+  background-color: var(--color-dark-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.orange {
+  background-color: var(--color-orange);
+}
+
+.black {
+  background-color: var(--color-black);
+}
