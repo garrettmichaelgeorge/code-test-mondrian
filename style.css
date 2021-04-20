@@ -1,10 +1,13 @@
 :root {
   --spacer-unit: 1rem;
-  --color-black: black;
-  --color-light-blue: light-blue;
-  --color-medium-blue: medium-blue;
-  --color-dark-blue: dark-blue;
-  --color-yellow: yellow;
+  --color-black: #150C0D;
+  --color-light-blue: #C6C5CB;
+  --color-medium-blue: #A1A1A6;
+  --color-dark-blue: #0D1C2D;
+  --color-yellow: #D9A918;
+  --color-light-red: #D04A1F;
+  --color-medium-red: #BD2E11;
+  --color-dark-red: #97200C;
   --color-orange: orange;
 }
 
@@ -42,26 +45,34 @@
   border: 1px dashed var(--color-black)
 }
 
-.light-blue {
+.background-light-blue {
   background-color: var(--color-light-blue);
 }
 
-.medium-blue {
+.background-medium-blue {
   background-color: var(--color-medium-blue);
 }
 
-.dark-blue {
+.background-dark-blue {
   background-color: var(--color-dark-blue);
 }
 
-.yellow {
+.background-yellow {
   background-color: var(--color-yellow);
 }
 
-.orange {
-  background-color: var(--color-orange);
+.background-light-red {
+  background-color: var(--color-light-red);
 }
 
-.black {
+.background-medium-red {
+  background-color: var(--color-medium-red);
+}
+
+.background-dark-red {
+  background-color: var(--color-dark-red);
+}
+
+.background-black {
   background-color: var(--color-black);
 }
